@@ -15,9 +15,9 @@ def find_top_5(filename):
         rows = [r for r in csvr]
     
     # Sort data and get top 5
-    gross_sort = lambda x : x["Gross"]
+    gross_sort = lambda x : int(x["Gross"])
     rows.sort(key=gross_sort)
-    top_five = rows[:-5:-1]
+    top_five = rows[:-6:-1]
 
     # Print out results
     for row in top_five:
