@@ -14,14 +14,20 @@ def find_top_5(filename):
         csvr = csv.DictReader(f)
         rows = [r for r in csvr]
     
+    # Reformat some data types
+    for row in rows:
+        row["Gross"] = int(row["Gross"])
+        row["Year"] = int(row["Release Date"][:4])
+
     # Sort data and get top 5
-    gross_sort = lambda x : int(x["Gross"])
+    gross_sort = lambda x : x["Gross"]
     rows.sort(key=gross_sort)
     top_five = rows[:-6:-1]
 
     # Print out results
-    for row in top_five:
-        print("{row[Title]} ({row[Release Date]}) - ${row[Gross]}".format(
+    for i, row in enumerate(top_five):
+        print("{ind}. {row[Title]} ({row[Year]}) - ${row[Gross]:,d}".format(
+            ind=i+1,
             row=row))
 
 
