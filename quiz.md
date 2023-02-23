@@ -19,24 +19,24 @@ Git nor I need the whole SHA.)
 
 ## Predicting merges
 
-Suppose that your branch for switching to a top-10 list was called `top_ten`
-and your branch generalizing to any number of movies was called `top_N`.
+Assuming your branch for switching to a top-10 list was called `top_ten`
+and your branch generalizing to any number of movies was called `top_N`:
 
 5. What do you think would happen if you ran the following commands?
 ```
-git checkout dev
+git checkout test
 git merge top_N
 ```
 
 6. What do you think would happen if you ran the following commands?
 ```
 git checkout top_ten
-git merge dev
+git merge test
 ```
 
 7. What do you think would happen if you ran the following commands?
 ```
-git checkout dev
+git checkout test
 git rebase top_ten
 git rebase top_N
 ```
