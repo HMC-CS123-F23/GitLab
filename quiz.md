@@ -19,22 +19,34 @@ Git nor I need the whole SHA.)
 
 ## Predicting merges
 
-Assuming your branch for switching to a top-10 list was called `top_ten`
-and your branch generalizing to any number of movies was called `top_N`:
+Assume at the start of each of these three questions that your
+branch for switching to a top-10 list was called `top_ten`
+and your branch generalizing to any number of movies was called `top_N`.
+Predict the behavior of these three possible operations - you don't
+have to provide a full `diff` but you should describe at a high level
+what changes would happen.
+
+These questions are supposed to be separate paths, not cumulative;
+for example, you should *not* assume that the operations of 5 were run
+before 6. When testing outcomes later in the lab, you should make sure to
+revert back to the state of the branch before you started these questions.
 
 5. What do you think would happen if you ran the following commands?
+What branches would change, and how?
 ```
 git checkout test
 git merge top_N
 ```
 
 6. What do you think would happen if you ran the following commands?
+What branches would change, and how?
 ```
 git checkout top_ten
 git merge test
 ```
 
 7. What do you think would happen if you ran the following commands?
+What branches would change, and how?
 ```
 git checkout test
 git rebase top_ten
