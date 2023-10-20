@@ -1,12 +1,12 @@
 1. What is your name?
-Answer:
+Answer: Nico Villalba
 
 2. What is your favorite color?
-Answer:
+Answer: Red
 
 3. What is your favorite food?
-Answer:
+Answer: Burger
 
 4. What's one place you've never been but would like to visit?
-Answer:
+Answer: Italy
 
